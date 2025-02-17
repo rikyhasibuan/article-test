@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "bdcd4354-4bba-4e62-b349-9d8e0e86f1cd",
+		"name": "Article",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36961258",
+		"_collection_link": "https://bdg-pride.postman.co/workspace/Team-Workspace~019e05e6-9dbb-4f34-8640-b4536ebc2438/collection/36961258-bdcd4354-4bba-4e62-b349-9d8e0e86f1cd?action=share&source=collection_link&creator=36961258"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/article?limit=2&offset=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/article/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Fourth Article Title\",\r\n  \"content\": \"This is the content of the fourth article. It should be at least 200 characters long to pass validation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nulla id quam aliquet, eget varius sapien malesuada.\",\r\n  \"category\": \"Technology\",\r\n  \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/article",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Third Article Title\",\r\n  \"content\": \"This is the content of the third article. It should be at least 200 characters long to pass validation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nulla id quam aliquet, eget varius sapien malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nulla id quam aliquet, eget varius sapien malesuada\",\r\n  \"category\": \"Technology\",\r\n  \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/article/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Third Article Title\",\r\n  \"content\": \"This is the content of the third article. It should be at least 200 characters long to pass validation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod nulla id quam aliquet, eget varius sapien malesuada.\",\r\n  \"category\": \"Technology\",\r\n  \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/article/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
